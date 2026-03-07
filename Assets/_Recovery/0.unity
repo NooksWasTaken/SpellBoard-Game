@@ -814,8 +814,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::player_Controller
   currentState: 0
-  moveSpeed: 7
-  jumpForce: 2
+  moveSpeed: 10
+  jumpForce: 2.5
   gravity: 9.81
   groundedTimer: 0
 --- !u!143 &1093967347
