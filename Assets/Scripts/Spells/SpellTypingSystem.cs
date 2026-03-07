@@ -7,13 +7,19 @@ public class SpellTypingSystem : MonoBehaviour
     public TMP_InputField spellInput;   // references the input field where the player can type spells
     public List<Spell> spells;          // list of spells the player can cast
 
-    void Start()
+    void OnEnable()
     {
         // When the player presses ENTER in the input field, unity calls the CheckSpell function
         spellInput.onSubmit.AddListener(CheckSpell);
 
         // automatically focus the input field so the player can start typing immediately
         spellInput.ActivateInputField();
+    }
+
+    void OnDisable()
+    {
+        // this function will run when the UI is disabled
+        ClearInput();
     }
 
     // runs immediately when the player presses ENTER on the input field

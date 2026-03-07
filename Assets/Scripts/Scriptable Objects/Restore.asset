@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23da435cdd50da488a513cf84f28961, type: 3}
   m_Name: Restore
   m_EditorClassIdentifier: Assembly-CSharp::Spell
-  spellName: 
-  incantation: 
+  spellName: Restore
+  incantation: restituo
   onSpellCast:
     m_PersistentCalls:
       m_Calls: []
