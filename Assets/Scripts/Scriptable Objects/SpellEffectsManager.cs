@@ -7,7 +7,6 @@ public class SpellEffectsManager : MonoBehaviour
     public void Restore()
     {
         Debug.Log("PLAYER CASTED RESTORE!");
-
     }
 
     public void Purify()
