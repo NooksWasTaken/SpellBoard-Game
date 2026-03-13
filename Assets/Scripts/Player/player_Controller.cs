@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class player_Controller : MonoBehaviour
 {
+    [Header("Player State")]
     public player_State currentState = player_State.Exploring;
 
     [Header("Movement Settings")]
@@ -12,6 +13,9 @@ public class player_Controller : MonoBehaviour
 
     [SerializeField] private float groundedTimer;
 
+    [Header("Spell Casting UI")]
+    public GameObject SpellCastingCanvas;
+
     private CharacterController controller;
     private Vector3 velocity;
     private bool isGrounded;
@@ -19,6 +23,7 @@ public class player_Controller : MonoBehaviour
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        SpellCastingCanvas.SetActive(false);
     }
 
     private void Update()
@@ -27,6 +32,7 @@ public class player_Controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             ToggleSpellCasting();
+            ToggleSpellCanvas();
         }
 
         if (controller.isGrounded)
@@ -87,5 +93,17 @@ public class player_Controller : MonoBehaviour
             : player_State.Exploring;
 
         Debug.Log($"State: {currentState}");
+    }
+
+    private void ToggleSpellCanvas()
+    {
+        if (currentState == player_State.SpellCasting)
+        {
+            SpellCastingCanvas.SetActive(true);
+        }
+        else if (currentState == player_State.Exploring)
+        {
+            SpellCastingCanvas.SetActive(false);
+        }
     }
 }
