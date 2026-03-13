@@ -12,8 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23da435cdd50da488a513cf84f28961, type: 3}
   m_Name: Purify
   m_EditorClassIdentifier: Assembly-CSharp::Spell
-  spellName: 
-  incantation: 
+  spellName: Purify
+  incantation: mundare
+  puzzleType: 1
   onSpellCast:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3919165668348003048, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
+        m_TargetAssemblyTypeName: SpellEffectsManager, Assembly-CSharp
+        m_MethodName: Purify
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
