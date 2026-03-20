@@ -12,6 +12,8 @@ public class SpellTypingSystem : MonoBehaviour
     void Awake()
     {
         // find the manager in the scene automatically if not assigned
+        // switching between branches might make this section buggy and not run properly
+        // so check the spell typing canvas during run time if the spells aren't running
         if (spellEffectsManager == null)
         {
             spellEffectsManager = FindFirstObjectByType<SpellEffectsManager>();

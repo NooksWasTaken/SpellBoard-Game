@@ -45,6 +45,7 @@ public class SpellEffectsManager : MonoBehaviour
     // helper function to find nearby puzzles of a certain type
     private void CheckNearbyPuzzles(PuzzleType type)
     {
+        Debug.Log("TEST TEXT 1");
         // draws a sphere to detect for puzzles
         Collider[] hits = Physics.OverlapSphere(transform.position, spellRadius, puzzleLayer);
 
@@ -56,11 +57,11 @@ public class SpellEffectsManager : MonoBehaviour
             {
                 // trigger puzzle solved event
                 puzzle.OnPuzzleSolved();
+                Debug.Log("TEST TEXT 2");
             }
         }
     }
 
-    // optional: visualize the spell detection radius in the Scene view
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;
