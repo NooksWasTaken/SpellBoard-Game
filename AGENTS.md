@@ -2,7 +2,7 @@
 - Project name: SpellBoard-Game
 - Unity version: Unity 6000.3.6f1
 - Active game object:
-  - Name: Cube (1)
+  - Name: floor_Temp (1)
   - Tag: Untagged
-  - Layer: PuzzleCollide
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

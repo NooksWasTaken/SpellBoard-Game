@@ -20,7 +20,7 @@ public class Puzzle : MonoBehaviour
         Color color = mat.color;
 
         // set puzzle settings based on inspector settings (Collision and Visibility)
-        gameObject.layer = CollideWithPlayer ? 6 : 7;
+        gameObject.layer = CollideWithPlayer ? 7 : 8;
         color.a = IsObjectHidden ? 0f : 1f;
 
         mat.color = color;
@@ -67,7 +67,7 @@ public class Puzzle : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         // set the object to collide with player after being fully visible
-        gameObject.layer = 6;
+        gameObject.layer = 7;
     }
 
     public void FadeOut()
