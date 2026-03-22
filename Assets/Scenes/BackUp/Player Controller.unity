@@ -206,13 +206,21 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163344736}
   serializedVersion: 2
+<<<<<<< Updated upstream
+  m_LocalRotation: {x: 0.2588191, y: -0.000018077364, z: 0.000067465626, w: 0.9659258}
+  m_LocalPosition: {x: -6.26, y: 5.310001, z: -10.970253}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+=======
   m_LocalRotation: {x: 0.3347363, y: -0.000012660631, z: 0.000068688496, w: 0.94231194}
-  m_LocalPosition: {x: -8.11522, y: 8.01565, z: -12.611891}
+  m_LocalPosition: {x: -6.2602315, y: 6.43852, z: -10.069033}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 352412485}
   - {fileID: 1008566085}
+>>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 33.441, y: 0, z: 0}
 --- !u!114 &163344740
@@ -291,7 +299,11 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+<<<<<<< Updated upstream
+--- !u!1 &797712557
+=======
 --- !u!1 &212240760
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -299,15 +311,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
+  - component: {fileID: 797712559}
+  - component: {fileID: 797712558}
+  - component: {fileID: 797712560}
+  m_Layer: 0
+  m_Name: iso_Cam
+=======
   - component: {fileID: 212240761}
   - component: {fileID: 212240762}
   m_Layer: 5
   m_Name: Text Area
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
+--- !u!114 &797712558
+=======
 --- !u!224 &212240761
 RectTransform:
   m_ObjectHideFlags: 0
@@ -330,11 +353,52 @@ RectTransform:
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &212240762
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+  m_GameObject: {fileID: 797712557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 1093967342}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 60.000004
+    OrthographicSize: 4.5
+    NearClipPlane: 0.01
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 1
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!4 &797712559
+=======
   m_GameObject: {fileID: 212240760}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -360,18 +424,32 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &282988121
+>>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+  m_GameObject: {fileID: 797712557}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.2588191, y: -0.000018077364, z: 0.000067465626, w: 0.9659258}
+  m_LocalPosition: {x: -6.26, y: 5.310001, z: -10.970253}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0.008}
+--- !u!114 &797712560
+=======
   m_GameObject: {fileID: 282988120}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.61662, y: -0, z: 70.75523}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 970747027}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &352412483
@@ -392,11 +470,39 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &352412484
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+  m_GameObject: {fileID: 797712557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachinePositionComposer
+  CameraDistance: 10
+  DeadZoneDepth: 0
+  Composition:
+    ScreenPosition: {x: 0.0000011557713, y: 0.000000044703484}
+    DeadZone:
+      Enabled: 0
+      Size: {x: 0.029167281, y: 0.094815165}
+    HardLimits:
+      Enabled: 0
+      Size: {x: 0.8, y: 0.8}
+      Offset: {x: 0, y: 0}
+  CenterOnActivate: 1
+  TargetOffset: {x: 0, y: 0, z: 0}
+  Damping: {x: 0, y: 0, z: 0}
+  Lookahead:
+    Enabled: 0
+    Time: 0
+    Smoothing: 0
+    IgnoreY: 0
+=======
   m_GameObject: {fileID: 352412483}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -457,8 +563,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.35980225, y: 1.3497314}
+  m_SizeDelta: {x: -0.52045345, y: -5.299489}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &358401950
 MonoBehaviour:
@@ -717,25 +823,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: iso_Cam
       objectReference: {fileID: 0}
-    - target: {fileID: 2886000919459317708, guid: e45ef1bdfd41c674e983e3cf879c952d, type: 3}
-      propertyPath: CameraDistance
-      value: 12.5
-      objectReference: {fileID: 0}
     - target: {fileID: 7763305889864737759, guid: e45ef1bdfd41c674e983e3cf879c952d, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 1093967342}
     - target: {fileID: 8105369478757973752, guid: e45ef1bdfd41c674e983e3cf879c952d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.11522
+      value: -6.2602315
       objectReference: {fileID: 0}
     - target: {fileID: 8105369478757973752, guid: e45ef1bdfd41c674e983e3cf879c952d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.01565
+      value: 6.43852
       objectReference: {fileID: 0}
     - target: {fileID: 8105369478757973752, guid: e45ef1bdfd41c674e983e3cf879c952d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.611891
+      value: -10.069033
       objectReference: {fileID: 0}
     - target: {fileID: 8105369478757973752, guid: e45ef1bdfd41c674e983e3cf879c952d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -928,6 +1030,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737469938}
   m_CullTransparentMesh: 1
+>>>>>>> Stashed changes
 --- !u!1 &903589105
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,9 +1043,8 @@ GameObject:
   - component: {fileID: 903589108}
   - component: {fileID: 903589107}
   - component: {fileID: 903589106}
-  - component: {fileID: 903589110}
   m_Layer: 5
-  m_Name: SpellCanvas
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1006,7 +1108,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -1022,93 +1124,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 436387299}
-  m_Father: {fileID: 1590638889}
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &903589110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903589105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e88fe115e547fb54090d9495d7a8c50c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpellTypingSystem
-  spellInput: {fileID: 436387300}
-  spells:
-  - {fileID: 11400000, guid: e2554e13a32bb0049a9f9460ca58838e, type: 2}
-  - {fileID: 11400000, guid: b5cbc977641b3ea4fa47d29af483431b, type: 2}
---- !u!1001 &970747026
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 282988121}
-    m_Modifications:
-    - target: {fileID: 552177310737715985, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.2221394
-      objectReference: {fileID: 0}
-    - target: {fileID: 552177310737715985, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.67725
-      objectReference: {fileID: 0}
-    - target: {fileID: 552177310737715985, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -70.836044
-      objectReference: {fileID: 0}
-    - target: {fileID: 552177310737715985, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 552177310737715985, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 552177310737715985, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 552177310737715985, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 552177310737715985, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 552177310737715985, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 552177310737715985, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331606826072992351, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
-      propertyPath: m_Name
-      value: SpellEffectsManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
---- !u!4 &970747027 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 552177310737715985, guid: ea8cf9596153aef4c817a21c678f3cd4, type: 3}
-  m_PrefabInstance: {fileID: 970747026}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &975909627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1197,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 002192ac53fd9144a92c5dd7b22819a7, type: 2}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1339,7 +1362,6 @@ GameObject:
   - component: {fileID: 1093967343}
   - component: {fileID: 1093967345}
   - component: {fileID: 1093967347}
-  - component: {fileID: 1093967348}
   m_Layer: 0
   m_Name: player_Obj
   m_TagString: Untagged
@@ -1436,11 +1458,11 @@ Transform:
   m_GameObject: {fileID: 1093967338}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: 0.31, z: -33.7}
+  m_LocalPosition: {x: -6.26, y: 0.31, z: -2.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 578459215}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1093967343
 MonoBehaviour:
@@ -1531,9 +1553,8 @@ MonoBehaviour:
   currentState: 0
   moveSpeed: 7
   jumpForce: 2
-  gravity: 35
+  gravity: 9.81
   groundedTimer: 0
-  SpellCastingCanvas: {fileID: 903589105}
 --- !u!143 &1093967347
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1559,22 +1580,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1093967348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093967338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e88fe115e547fb54090d9495d7a8c50c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpellTypingSystem
-  spellInput: {fileID: 436387300}
-  spells:
-  - {fileID: 11400000, guid: b5cbc977641b3ea4fa47d29af483431b, type: 2}
-  - {fileID: 11400000, guid: e2554e13a32bb0049a9f9460ca58838e, type: 2}
 --- !u!1 &1319097253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,7 +1751,7 @@ Transform:
   m_GameObject: {fileID: 1567095138}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -9.8, y: 19.5, z: 17}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1781,6 +1786,8 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+<<<<<<< Updated upstream
+=======
 --- !u!1 &1590638888
 GameObject:
   m_ObjectHideFlags: 0
@@ -2062,11 +2069,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770586446}
   m_CullTransparentMesh: 1
+>>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1567095140}
+  - {fileID: 163344739}
+  - {fileID: 903589109}
+  - {fileID: 1319097256}
+  - {fileID: 1093967342}
+  - {fileID: 797712559}
+  - {fileID: 975909631}
+<<<<<<< Updated upstream
+=======
+  - {fileID: 1698899791}
+  - {fileID: 163344739}
+  - {fileID: 719757441}
   - {fileID: 578459215}
   - {fileID: 1590638889}
   - {fileID: 282988121}
+>>>>>>> Stashed changes
