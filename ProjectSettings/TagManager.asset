@@ -8,12 +8,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Pixel
-  - 
-  - 
+  - PuzzleCollide
+  - PuzzleNoCollide
+  -
   - 
   - 
   - 

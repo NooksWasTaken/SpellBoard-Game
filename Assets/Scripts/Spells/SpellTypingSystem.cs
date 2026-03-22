@@ -7,6 +7,23 @@ public class SpellTypingSystem : MonoBehaviour
     public TMP_InputField spellInput;   // references the input field where the player can type spells
     public List<Spell> spells;          // list of spells the player can cast
 
+    public SpellEffectsManager spellEffectsManager; // reference to yes
+
+    void Awake()
+    {
+        // find the manager in the scene automatically if not assigned
+        // switching between branches might make this section buggy and not run properly
+        // so check the spell typing canvas during run time if the spells aren't running
+        if (spellEffectsManager == null)
+        {
+            spellEffectsManager = FindFirstObjectByType<SpellEffectsManager>();
+            if (spellEffectsManager == null)
+            {
+                Debug.LogError("SpellEffectsManager.cs not found");
+            }
+        }
+    }
+
     void OnEnable()
     {
         // When the player presses ENTER in the input field, unity calls the CheckSpell function
@@ -54,13 +71,19 @@ public class SpellTypingSystem : MonoBehaviour
         ClearInput();
     }
 
-    // this function runs whena valid spell is cast
+    // this function runs when a valid spell is cast
     void CastSpell(Spell spell)
     {
-        // empty cuz scenes are not merged yet
+        // log for debugging
         Debug.Log("Spell Cast: " + spell.spellName);
 
-        // call the event attached to the spell
+        // call the scene manager to perform the spell effect based on puzzle type
+        if (spellEffectsManager != null)
+        {
+            spellEffectsManager.CastSpellEffect(spell.puzzleType);
+        }
+
+        // optional: call the event attached to the spell (VFX, UI, etc.)
         spell.onSpellCast.Invoke();
     }
 
