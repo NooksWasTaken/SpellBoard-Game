@@ -13,8 +13,13 @@ public class Puzzle : MonoBehaviour
     [Header("Puzzle Events to Run")]
     public UnityEvent onPuzzleSolved;
 
+    private SpellTypingSystem typingSystem;
+
     private void Start()
     {
+        // find the spell system in the scene
+        typingSystem = FindFirstObjectByType<SpellTypingSystem>();
+
         Renderer renderer = GetComponent<Renderer>();
         Material mat = renderer.material;
         Color color = mat.color;
@@ -26,13 +31,37 @@ public class Puzzle : MonoBehaviour
         mat.color = color;
     }
 
+    // runs this first to check if the required spell exists in the player's list
+    public void TrySolvePuzzle()
+    {
+        if (typingSystem == null)
+        {
+            Debug.LogError("SpellTypingSystem not found!");
+            return;
+        }
+
+        // loop through every spell the player has
+        foreach (Spell spell in typingSystem.spells)
+        {
+            // check if the spell matches the required puzzle type
+            if (spell.puzzleType == puzzleType)
+            {
+                Debug.Log("Correct spell found!");
+                OnPuzzleSolved();
+                return;
+            }
+        }
+
+        Debug.Log("Required spell not found.");
+    }
+
     public void OnPuzzleSolved()
     {
         onPuzzleSolved.Invoke(); // triggers event(s) assigned in the inspector
         Debug.Log("Puzzle Function running");
     }
 
-    
+
     public void FadeIn()
     {
         StartCoroutine(FadeInCoroutine());
@@ -107,6 +136,4 @@ public class Puzzle : MonoBehaviour
         // fully disable the object after opacity is at 0
         this.gameObject.SetActive(false);
     }
-
-
 }

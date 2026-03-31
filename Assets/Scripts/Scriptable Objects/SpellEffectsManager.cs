@@ -6,9 +6,28 @@ public class SpellEffectsManager : MonoBehaviour
     public float spellRadius = 5f;        // radius of the spell effect
     public LayerMask puzzleLayer;         // layer to detect puzzles
 
+    private SpellTypingSystem typingSystem;
+
+    private void Start()
+    {
+        // get the SpellTypingSystem from the same player object
+        typingSystem = GetComponent<SpellTypingSystem>();
+        if (typingSystem == null)
+        {
+            Debug.LogError("SpellTypingSystem not found on player!");
+        }
+    }
+
     // performs the appropriate spell based on puzzle type
     public void CastSpellEffect(PuzzleType type)
     {
+        // check if player actually has the spell before casting
+        if (!HasSpell(type))
+        {
+            Debug.Log("Player does not have this spell.");
+            return;
+        }
+
         switch (type)
         {
             case PuzzleType.RESTORE:
@@ -19,6 +38,22 @@ public class SpellEffectsManager : MonoBehaviour
                 Purify();
                 break;
         }
+    }
+
+    // helper function to check if the spell exists in the player's list
+    private bool HasSpell(PuzzleType type)
+    {
+        if (typingSystem == null) return false;
+
+        foreach (Spell spell in typingSystem.spells)
+        {
+            if (spell.puzzleType == type)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     // Unique spell functions
@@ -45,7 +80,6 @@ public class SpellEffectsManager : MonoBehaviour
     // helper function to find nearby puzzles of a certain type
     private void CheckNearbyPuzzles(PuzzleType type)
     {
-        Debug.Log("TEST TEXT 1");
         // draws a sphere to detect for puzzles
         Collider[] hits = Physics.OverlapSphere(transform.position, spellRadius, puzzleLayer);
 
@@ -56,8 +90,7 @@ public class SpellEffectsManager : MonoBehaviour
             if (puzzle != null && puzzle.puzzleType == type)
             {
                 // trigger puzzle solved event
-                puzzle.OnPuzzleSolved();
-                Debug.Log("TEST TEXT 2");
+                puzzle.TrySolvePuzzle();
             }
         }
     }
