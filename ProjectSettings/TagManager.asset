@@ -15,8 +15,8 @@ TagManager:
   - PuzzleCollide
   - PuzzleNoCollide
   - Interactable
-  - 
-  - 
+  - PlayerNoCollide
+  - Obstacle
   - 
   - 
   - 
