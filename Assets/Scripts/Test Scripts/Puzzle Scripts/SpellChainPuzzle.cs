@@ -3,11 +3,15 @@ using UnityEngine;
 public class SpellChainPuzzle : MonoBehaviour, IPuzzle
 {
     [Header("Spell Chain")]
-    [SerializeField] private PlayerSpells[] spellChain;
+    [SerializeField] private PlayerSpells[] spellChain;         // spells required to complete the puzzle, follow a strict order depending on which element was assigned first
 
-    [Header("Puzzle")]
+    [Header("Puzzle Settings")]
+    [SerializeField] private MonoBehaviour[] outcomeObjects;    // objects to be affected after the puzzle is solved
+    [SerializeField] private bool replayable;
     [SerializeField] private float timeLimit = 10f;
+    [SerializeField] private string solvedLayer = "PuzzleSolved";    
 
+    private IPuzzleOutcome[] outcomes;
     private PuzzleVisual visual;
     private bool solved;
     private int currentSpellIndex;
@@ -15,11 +19,23 @@ public class SpellChainPuzzle : MonoBehaviour, IPuzzle
     private void Awake()
     {
         visual = GetComponent<PuzzleVisual>();
+
+        outcomes = new IPuzzleOutcome[outcomeObjects.Length];
+
+        for (int i = 0; i < outcomeObjects.Length; i++)
+        {
+            outcomes[i] = outcomeObjects[i] as IPuzzleOutcome;
+
+            if (outcomes[i] == null)
+            {
+                Debug.LogError($"{outcomeObjects[i].name} does not have the IPuzzleOutcome interface");
+            }
+        }
     }
 
     public PuzzleResult TrySolve(PlayerSpells spell)
     {
-        if (solved)
+        if (solved && !replayable)
             return PuzzleResult.Failed;
 
         if (spellChain == null || spellChain.Length == 0)
@@ -44,12 +60,25 @@ public class SpellChainPuzzle : MonoBehaviour, IPuzzle
 
         if (currentSpellIndex >= spellChain.Length)
         {
-            solved = true;
-
             Debug.Log("Spell chain completed!");
 
-            // Replace this with your own puzzle completion logic.
-            gameObject.SetActive(false);
+            solved = true;
+
+            if (!replayable)
+            {
+                gameObject.layer = LayerMask.NameToLayer(solvedLayer);
+            }
+
+            foreach (var outcome in outcomes)
+            {
+                outcome?.Execute();
+            }
+
+            if (replayable)
+            {
+                solved = false;
+                currentSpellIndex = 0;
+            }
 
             return PuzzleResult.Solved;
         }
@@ -96,5 +125,6 @@ public class SpellChainPuzzle : MonoBehaviour, IPuzzle
     public void ResetChain()
     {
         currentSpellIndex = 0;
+        solved = false;
     }
 }
