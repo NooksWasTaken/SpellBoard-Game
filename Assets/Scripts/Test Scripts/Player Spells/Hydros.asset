@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827b0abe59a660646a4b23c421cc1d6f, type: 3}
+  m_Name: Hydros
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSpells
+  spellName: Hydros
+  keyword: Hydros
+  description: 'Spell Name: Hydros
+
+    
+
+    Incantation Word: Hydros
+
+    
+
+    "The
+    sea never chooses who it carries or who it claims, it only remembers every name
+    whispered beneath its waves."
+
+'
+  spellIcon: {fileID: 21300000, guid: a707c6c044efdcc488dab75addf8a3b9, type: 3}
+  castEffect: {fileID: 6817668439792003015, guid: 6363693a8edfa5641a88cf7798dae2b1, type: 3}

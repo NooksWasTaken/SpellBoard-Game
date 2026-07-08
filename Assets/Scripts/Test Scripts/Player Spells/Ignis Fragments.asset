@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811eb44fc2b5f18428e0005ad950811a, type: 3}
+  m_Name: Ignis Fragments
+  m_EditorClassIdentifier: Assembly-CSharp::SpellFragment
+  completedSpell: {fileID: 11400000, guid: abbd617fc5d5ea143a4d741d0014bfb5, type: 2}
+  fragmentName: Ignis Fragments
+  fragmentIcon: {fileID: 21300000, guid: 36f3fd56e2344cb4c8837d72edd76d7c, type: 3}
+  fragmentsRequired: 3

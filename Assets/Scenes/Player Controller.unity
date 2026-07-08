@@ -1615,9 +1615,9 @@ GameObject:
   - component: {fileID: 1093967341}
   - component: {fileID: 1093967340}
   - component: {fileID: 1093967339}
+  - component: {fileID: 1093967347}
   - component: {fileID: 1093967344}
   - component: {fileID: 1093967343}
-  - component: {fileID: 1093967347}
   - component: {fileID: 1093967345}
   - component: {fileID: 1093967350}
   - component: {fileID: 1093967348}
@@ -2218,7 +2218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c28ef4c638b0aca47a007fc7715a64ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle
-  puzzleType: 0
+  puzzleType: 1
   CollideWithPlayer: 1
   IsObjectHidden: 0
   fadeDuration: 2
