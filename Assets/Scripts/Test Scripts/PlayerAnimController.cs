@@ -66,4 +66,11 @@ public class PlayerAnimController : MonoBehaviour
         anim.SetBool("move", player.CurrentState == PlayerController.PlayerState.Move && isMoving);
         anim.SetBool("casting", player.CurrentState == PlayerController.PlayerState.Casting);
     }
+
+    public void ForceIdle()
+    {
+        anim.SetBool("move", false);
+        anim.SetBool("casting", false);
+        anim.SetBool("idle", true);
+    }
 }

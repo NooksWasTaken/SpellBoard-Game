@@ -10,5 +10,7 @@ public class PlayerLayerOutcome : MonoBehaviour, IPuzzleOutcome
     {
         if (player != null)
             player.SetLayerTemporarily(targetLayer, duration);
+
+        LayerDurationHUD.Instance?.StartTimer(duration);
     }
 }
