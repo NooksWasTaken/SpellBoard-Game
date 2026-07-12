@@ -2,7 +2,7 @@
 - Project name: SpellBoard-Game
 - Unity version: Unity 6000.3.6f1
 - Active game object:
-  - Name: ScreenTransition
+  - Name: Link Puzzle 1
   - Tag: Untagged
-  - Layer: Default
+  - Layer: PuzzleUnsolved
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

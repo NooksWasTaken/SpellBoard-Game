@@ -9,7 +9,10 @@ public class SpellChainPuzzle : MonoBehaviour, IPuzzle
     [SerializeField] private MonoBehaviour[] outcomeObjects;    // objects to be affected after the puzzle is solved
     [SerializeField] private bool replayable;
     [SerializeField] private float timeLimit = 10f;
-    [SerializeField] private string solvedLayer = "PuzzleSolved";    
+    [SerializeField] private string solvedLayer = "PuzzleSolved";
+
+    [Header("Puzzle Requirement")]
+    [SerializeField] private PuzzleRequirement requirement;
 
     private IPuzzleOutcome[] outcomes;
     private PuzzleVisual visual;
@@ -35,6 +38,12 @@ public class SpellChainPuzzle : MonoBehaviour, IPuzzle
 
     public PuzzleResult TrySolve(PlayerSpells spell)
     {
+        if (requirement != null && !requirement.IsUnlocked)
+        {
+            Debug.Log("This puzzle is locked.");
+            return PuzzleResult.Failed;
+        }
+
         if (solved && !replayable)
             return PuzzleResult.Failed;
 
