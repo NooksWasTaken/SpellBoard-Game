@@ -42608,7 +42608,7 @@ GameObject:
   - component: {fileID: 821499583}
   - component: {fileID: 821499581}
   - component: {fileID: 821499585}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Miasma Collider (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49481,7 +49481,7 @@ GameObject:
   - component: {fileID: 950013091}
   - component: {fileID: 950013089}
   - component: {fileID: 950013093}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Miasma Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66564,7 +66564,7 @@ GameObject:
   - component: {fileID: 1441368064}
   - component: {fileID: 1441368063}
   - component: {fileID: 1441368066}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Miasma Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68083,7 +68083,7 @@ GameObject:
   - component: {fileID: 1506353673}
   - component: {fileID: 1506353672}
   - component: {fileID: 1506353675}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Miasma Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70915,7 +70915,7 @@ GameObject:
   - component: {fileID: 1635370096}
   - component: {fileID: 1635370095}
   - component: {fileID: 1635370098}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Miasma Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74071,7 +74071,7 @@ GameObject:
   - component: {fileID: 1817832062}
   - component: {fileID: 1817832060}
   - component: {fileID: 1817832064}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Center Miasma Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77288,7 +77288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4219031596732894067, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.14997101
+      value: 26.48
       objectReference: {fileID: 0}
     - target: {fileID: 4219031596732894067, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -77296,7 +77296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4219031596732894067, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.84998775
+      value: -222.88
       objectReference: {fileID: 0}
     - target: {fileID: 4635422996390449030, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_Layer
@@ -77312,15 +77312,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6213131659691627401, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.15
+      value: 26.480001
       objectReference: {fileID: 0}
     - target: {fileID: 6213131659691627401, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.71
+      value: 2.7100005
       objectReference: {fileID: 0}
     - target: {fileID: 6213131659691627401, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.15
+      value: -227.88
       objectReference: {fileID: 0}
     - target: {fileID: 6377704958465448497, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_Layer
@@ -77340,7 +77340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7896412626870601176, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57.13
+      value: 31.53
       objectReference: {fileID: 0}
     - target: {fileID: 7896412626870601176, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -77348,7 +77348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7896412626870601176, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -223.7
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8023519428449330859, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_Layer
@@ -77356,15 +77356,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8129378713267715209, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.14996958
+      value: 26.480001
       objectReference: {fileID: 0}
     - target: {fileID: 8129378713267715209, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7099996
+      value: 2.7100005
       objectReference: {fileID: 0}
     - target: {fileID: 8129378713267715209, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.1499987
+      value: -227.88
       objectReference: {fileID: 0}
     - target: {fileID: 8903862684801126543, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -77377,7 +77377,7 @@ PrefabInstance:
     - target: {fileID: 8911022669556489696, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: 'unlockedSpells.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: abbd617fc5d5ea143a4d741d0014bfb5, type: 2}
+      objectReference: {fileID: 11400000, guid: 43fc81559ae72f241a790d15b4652806, type: 2}
     - target: {fileID: 8911022669556489696, guid: 9b6b4e46c3bf2bd4b80ee4be13a838f4, type: 3}
       propertyPath: 'unlockedSpells.Array.data[1]'
       value: 
@@ -77928,7 +77928,7 @@ GameObject:
   - component: {fileID: 2023650540}
   - component: {fileID: 2023650539}
   - component: {fileID: 2023650542}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Miasma Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
