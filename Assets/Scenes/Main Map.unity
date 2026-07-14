@@ -76446,6 +76446,7 @@ GameObject:
   - component: {fileID: 1930509965}
   - component: {fileID: 1930509964}
   - component: {fileID: 1930509970}
+  - component: {fileID: 1930509971}
   m_Layer: 7
   m_Name: Main Corrupted Core
   m_TagString: Untagged
@@ -76552,8 +76553,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: abbd617fc5d5ea143a4d741d0014bfb5, type: 2}
   - {fileID: 11400000, guid: 43fc81559ae72f241a790d15b4652806, type: 2}
   outcomeObjects:
-  - {fileID: 1930509964}
+  - {fileID: 1930509971}
   - {fileID: 1930509970}
+  - {fileID: 1930509970}
+  - {fileID: 1930509964}
   replayable: 0
   timeLimit: 10
   solvedLayer: PuzzleSolved
@@ -76591,6 +76594,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleRequirementOutcome
   targetRequirement: {fileID: 1514290517}
+--- !u!114 &1930509971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930509962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5efd0f3b6bdfa3749b4cd2ae5ba18c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RemoveVignetteOutcome
 --- !u!1 &1941675819
 GameObject:
   m_ObjectHideFlags: 0
