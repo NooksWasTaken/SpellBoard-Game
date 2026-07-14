@@ -1,29 +1,51 @@
-using System.Collections;
 using UnityEngine;
 
 public class PlayerLayerController : MonoBehaviour
 {
-    private Coroutine layerRoutine;
+    [SerializeField] private float maxDuration = 15f;
+
+    private int originalLayer;
+    private int currentTemporaryLayer;
+
+    private float remainingTime;
+    private bool layerActive;
+
+    private void Awake()
+    {
+        originalLayer = gameObject.layer;
+    }
 
     public void SetLayerTemporarily(int layer, float duration)
     {
-        if (layerRoutine != null)
-            StopCoroutine(layerRoutine);
+        if (!layerActive)
+        {
+            originalLayer = gameObject.layer;
+            currentTemporaryLayer = layer;
 
-        layerRoutine = StartCoroutine(ChangeLayer(layer, duration));
+            SetLayer(transform, layer);
+
+            remainingTime = Mathf.Min(duration, maxDuration);
+            layerActive = true;
+            return;
+        }
+
+        remainingTime = Mathf.Min(remainingTime + duration, maxDuration);
     }
 
-    private IEnumerator ChangeLayer(int layer, float duration)
+    private void Update()
     {
-        int originalLayer = gameObject.layer;
+        if (!layerActive)
+            return;
 
-        SetLayer(transform, layer);
+        remainingTime -= Time.deltaTime;
 
-        yield return new WaitForSeconds(duration);
+        if (remainingTime <= 0f)
+        {
+            SetLayer(transform, originalLayer);
 
-        SetLayer(transform, originalLayer);
-
-        layerRoutine = null;
+            layerActive = false;
+            remainingTime = 0f;
+        }
     }
 
     private void SetLayer(Transform target, int layer)
@@ -33,4 +55,7 @@ public class PlayerLayerController : MonoBehaviour
         foreach (Transform child in target)
             SetLayer(child, layer);
     }
+
+    public float RemainingTime => remainingTime;
+    public float MaxDuration => maxDuration;
 }

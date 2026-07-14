@@ -18,7 +18,7 @@ public class SceneLoader : MonoBehaviour
 
         if (SlideInTransition.Instance != null)
         {
-            SlideInTransition.Instance.PlayTransition();
+            SlideInTransition.Instance.PlayEnterTransition();
 
             while (SlideInTransition.Instance.IsPlaying)
                 yield return null;

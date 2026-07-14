@@ -45,7 +45,12 @@ public class PickupUI : MonoBehaviour
     public void ShowNotification(string itemName)
     {
         if (notificationRoutine != null)
+        {
             StopCoroutine(notificationRoutine);
+            notificationRoutine = null;
+        }
+
+        notificationPanel.SetActive(false);
 
         notificationRoutine = StartCoroutine(NotificationRoutine(itemName));
     }
@@ -53,11 +58,11 @@ public class PickupUI : MonoBehaviour
     private IEnumerator NotificationRoutine(string itemName)
     {
         notificationPanel.SetActive(true);
-
         notificationText.text = $"Picked up {itemName}!";
 
         yield return new WaitForSeconds(notificationDuration);
 
         notificationPanel.SetActive(false);
+        notificationRoutine = null;
     }
 }

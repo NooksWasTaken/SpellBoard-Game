@@ -216,6 +216,35 @@ public class TypingManager : MonoBehaviour
             return;
         }
 
+        PlayerController player = FindFirstObjectByType<PlayerController>();
+
+        if (player == null)
+        {
+            Debug.LogWarning("No PlayerController found in the scene.");
+            return;
+        }
+
+        ParticleSystem effect = Instantiate(
+            spell.castEffect,
+            player.transform.position,
+            player.transform.rotation,
+            player.transform);
+
+        Destroy(effect.gameObject,
+            effect.main.duration + effect.main.startLifetime.constantMax);
+    }
+
+    /*
+    private void SpawnSpellEffect(PlayerSpells spell)
+    {
+        Debug.Log($"SpawnSpellEffect: {spell.name}");
+
+        if (spell.castEffect == null)
+        {
+            Debug.LogWarning($"{spell.name} has no cast effect assigned.");
+            return;
+        }
+
         Transform target = selector.CurrentPuzzleObject.transform;
 
         ParticleSystem effect = Instantiate(spell.castEffect, target.position, Quaternion.identity);
@@ -223,6 +252,7 @@ public class TypingManager : MonoBehaviour
         Destroy(effect.gameObject,
             effect.main.duration + effect.main.startLifetime.constantMax);
     }
+    */
 
     private void PlayFailureEffect()
     {

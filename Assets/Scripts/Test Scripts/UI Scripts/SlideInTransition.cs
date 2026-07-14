@@ -9,6 +9,7 @@ public class SlideInTransition : MonoBehaviour
 
     [Header("Animation")]
     [SerializeField] private Vector2 startPosition = new Vector2(-2000f, 0f);
+    [SerializeField] private Vector2 exitPosition = new Vector2(2000f, 0f);
     [SerializeField] private Vector2 targetPosition = Vector2.zero;
     [SerializeField] private float duration = 1f;
     [SerializeField] private AnimationCurve curve = AnimationCurve.EaseInOut(0, 0, 1, 1);
@@ -31,7 +32,7 @@ public class SlideInTransition : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void PlayTransition()
+    public void PlayEnterTransition()
     {
         gameObject.SetActive(true);
 
@@ -39,10 +40,21 @@ public class SlideInTransition : MonoBehaviour
             StopCoroutine(slideRoutine);
 
         rectTransform.anchoredPosition = startPosition;
-        slideRoutine = StartCoroutine(SlideRoutine());
+        slideRoutine = StartCoroutine(SlideRoutine(startPosition, targetPosition));
     }
 
-    private IEnumerator SlideRoutine()
+    public void PlayExitTransition()
+    {
+        gameObject.SetActive(true);
+
+        if (slideRoutine != null)
+            StopCoroutine(slideRoutine);
+
+        rectTransform.anchoredPosition = targetPosition;
+        slideRoutine = StartCoroutine(SlideRoutine(targetPosition, exitPosition));
+    }
+
+    private IEnumerator SlideRoutine(Vector2 from, Vector2 to)
     {
         IsPlaying = true;
 
@@ -54,16 +66,18 @@ public class SlideInTransition : MonoBehaviour
 
             float t = curve.Evaluate(Mathf.Clamp01(elapsed / duration));
 
-            rectTransform.anchoredPosition =
-                Vector2.Lerp(startPosition, targetPosition, t);
+            rectTransform.anchoredPosition = Vector2.Lerp(from, to, t);
 
             yield return null;
         }
 
-        rectTransform.anchoredPosition = targetPosition;
+        rectTransform.anchoredPosition = to;
 
         IsPlaying = false;
         slideRoutine = null;
+
+        if (to == exitPosition)
+            gameObject.SetActive(false);
     }
 
     public void Hide()

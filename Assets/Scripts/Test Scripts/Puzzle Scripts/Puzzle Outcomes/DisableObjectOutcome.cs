@@ -3,28 +3,31 @@ using UnityEngine;
 
 public class DisableObjectOutcome : MonoBehaviour, IPuzzleOutcome
 {
-    [Header("Target (Leave empty to disable this object)")]
-    [SerializeField] private GameObject target;
-
-    [SerializeField] private float delay = 0f;
+    [SerializeField] private GameObject[] targetObjects;
+    [SerializeField] private float disableDelay = 0f;
 
     public void Execute()
     {
-        GameObject objectToDisable = target != null ? target : gameObject;
-
-        if (delay <= 0f)
-        {
-            objectToDisable.SetActive(false);
-        }
-        else
-        {
-            StartCoroutine(DisableAfterDelay(objectToDisable));
-        }
+        StartCoroutine(DisableRoutine());
     }
 
-    private IEnumerator DisableAfterDelay(GameObject objectToDisable)
+    private IEnumerator DisableRoutine()
     {
-        yield return new WaitForSeconds(delay);
-        objectToDisable.SetActive(false);
+        if (disableDelay > 0f)
+            yield return new WaitForSeconds(disableDelay);
+
+        if (targetObjects == null || targetObjects.Length == 0)
+        {
+            gameObject.SetActive(false);
+            yield break;
+        }
+
+        foreach (GameObject target in targetObjects)
+        {
+            if (target != null)
+            {
+                target.SetActive(false);
+            }
+        }
     }
 }

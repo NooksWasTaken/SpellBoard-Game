@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1416735369007562779
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -331.71997
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.2199993
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.720001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.67901576
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6790159
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.19732603
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.19732603
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 32.408
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8466a406b2043f14dbfc98e360116f3e, type: 2}
+    - target: {fileID: 919132149155446097, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      propertyPath: m_Name
+      value: Purify Puzzle 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4337443443608477186}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6854693270223781448}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1656291617296767456}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 868659303446128255}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5230124303329248252}
+  m_SourcePrefab: {fileID: 100100000, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+--- !u!1 &2263103472870145354 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ce05c20659491e44dbdadc2cbc5cc509, type: 3}
+  m_PrefabInstance: {fileID: 1416735369007562779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4337443443608477186
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263103472870145354}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.54315007, y: 0.16337489, z: 0.17238948}
+  m_Center: {x: 0.18988763, y: 0.000000016603392, z: 0.07205799}
+--- !u!114 &6854693270223781448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263103472870145354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6bbd917e1cb8c349bdcd1707b178dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpellPuzzle
+  requiredSpell: {fileID: 11400000, guid: e5b5110b3b342b341930dfd7103d37b2, type: 2}
+  outcomeObjects:
+  - {fileID: 5230124303329248252}
+  timeLimit: 5
+  replayable: 0
+  solvedLayer: PuzzleSolved
+--- !u!114 &1656291617296767456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263103472870145354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &868659303446128255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263103472870145354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6596a3a717ceae946b92bb4f3886de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleVisual
+--- !u!114 &5230124303329248252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263103472870145354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0815f2e3bac23d04bbe8b05834eadf41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableObjectOutcome
+  target: {fileID: 0}
+  delay: 0
