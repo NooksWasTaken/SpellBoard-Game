@@ -75,6 +75,7 @@ public class MiasmaObstacle : MonoBehaviour
 
         controller.enabled = false;
         other.transform.position = returnPoint.position;
+        MiasmaVignette.Instance.FadeOut();
         controller.enabled = true;
 
         while (TransitionUI.Instance.IsTransitionRunning)

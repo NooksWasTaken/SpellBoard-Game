@@ -2,7 +2,7 @@
 - Project name: SpellBoard-Game
 - Unity version: Unity 6000.3.6f1
 - Active game object:
-  - Name: iso_Cam
+  - Name: Miasma Collider
   - Tag: Untagged
-  - Layer: Default
+  - Layer: Obstacle
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
