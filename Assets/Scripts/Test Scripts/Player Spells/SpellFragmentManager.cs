@@ -31,6 +31,7 @@ public class PlayerFragmentManager : MonoBehaviour
             entry.collected = 0;
 
             progress.Add(entry);
+            UIAlertManager.Instance.SetJournalAlert(true);
         }
 
         entry.collected++;

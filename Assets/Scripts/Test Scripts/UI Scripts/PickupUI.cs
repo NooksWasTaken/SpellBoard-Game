@@ -7,10 +7,10 @@ public class PickupUI : MonoBehaviour
     public static PickupUI Instance { get; private set; }
 
     [Header("UI")]
-    [SerializeField] private GameObject promptPanel;
+    [SerializeField] private CanvasGroup promptGroup;
     [SerializeField] private TMP_Text promptText;
 
-    [SerializeField] private GameObject notificationPanel;
+    [SerializeField] private CanvasGroup notificationGroup;
     [SerializeField] private TMP_Text notificationText;
 
     [SerializeField] private float notificationDuration = 2f;
@@ -27,42 +27,45 @@ public class PickupUI : MonoBehaviour
 
         Instance = this;
 
-        promptPanel.SetActive(false);
-        notificationPanel.SetActive(false);
+        SetCanvasGroup(promptGroup, false);
+        SetCanvasGroup(notificationGroup, false);
+    }
+
+    private void SetCanvasGroup(CanvasGroup group, bool visible)
+    {
+        group.alpha = visible ? 1f : 0f;
+        group.interactable = visible;
+        group.blocksRaycasts = visible;
     }
 
     public void ShowPrompt(string itemName)
     {
-        promptPanel.SetActive(true);
         promptText.text = $"[E] {itemName}";
+        SetCanvasGroup(promptGroup, true);
     }
 
     public void HidePrompt()
     {
-        promptPanel.SetActive(false);
+        SetCanvasGroup(promptGroup, false);
     }
 
     public void ShowNotification(string itemName)
     {
         if (notificationRoutine != null)
-        {
             StopCoroutine(notificationRoutine);
-            notificationRoutine = null;
-        }
-
-        notificationPanel.SetActive(false);
 
         notificationRoutine = StartCoroutine(NotificationRoutine(itemName));
     }
 
     private IEnumerator NotificationRoutine(string itemName)
     {
-        notificationPanel.SetActive(true);
         notificationText.text = $"Picked up {itemName}!";
+
+        SetCanvasGroup(notificationGroup, true);
 
         yield return new WaitForSeconds(notificationDuration);
 
-        notificationPanel.SetActive(false);
+        SetCanvasGroup(notificationGroup, false);
         notificationRoutine = null;
     }
 }

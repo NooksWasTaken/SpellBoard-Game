@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpellJournal : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class SpellJournal : MonoBehaviour
     [SerializeField] private FragmentEntryUI fragmentEntryPrefab;
 
     [Header("Other HUD References")]
-    [SerializeField] private GameObject PickUpHUD;
+    [SerializeField] private CanvasGroup pickUpHUD;
     [SerializeField] private GameObject journalUI;
     [SerializeField] private GameObject CastIcon;
 
@@ -40,6 +41,9 @@ public class SpellJournal : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
+            if (NoteUI.Instance != null && NoteUI.Instance.IsNoteOpen)
+                return;
+
             ToggleJournal();
         }
     }
@@ -50,10 +54,15 @@ public class SpellJournal : MonoBehaviour
             return;
 
         isOpen = !isOpen;
+
         journalUI.SetActive(isOpen);
-        PickUpHUD.SetActive(!isOpen);
         CastIcon.SetActive(!isOpen);
 
+        pickUpHUD.alpha = isOpen ? 0f : 1f;
+        pickUpHUD.interactable = !isOpen;
+        pickUpHUD.blocksRaycasts = !isOpen;
+        
+        UIAlertManager.Instance.SetJournalAlert(false);
         Cursor.lockState = isOpen ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = isOpen;
 

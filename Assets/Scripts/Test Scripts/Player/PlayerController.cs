@@ -39,6 +39,9 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            if (NoteUI.Instance != null && NoteUI.Instance.IsNoteOpen)
+                return;
+
             ToggleState();
         }
 
@@ -92,6 +95,7 @@ public class PlayerController : MonoBehaviour
             case PlayerState.Casting:
                 HUDCanvas.gameObject.SetActive(true);
                 typingManager.ShowWaitingUI();
+                PickupUI.Instance.HidePrompt();
 
                 CastIconToggle.Instance.ToggleIcon();
                 CameraController.Instance.ZoomIn();

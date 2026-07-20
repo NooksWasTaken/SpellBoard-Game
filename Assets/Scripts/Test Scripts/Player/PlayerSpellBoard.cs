@@ -42,6 +42,7 @@ public class PlayerSpellBoard : MonoBehaviour
             return false;
 
         unlockedSpells.Add(spell);
+        UIAlertManager.Instance.SetJournalAlert(true);
 
         if (SpellJournal.Instance != null)
         {

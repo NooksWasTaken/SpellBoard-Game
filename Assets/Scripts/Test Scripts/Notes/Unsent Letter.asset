@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070a5cc867f57534e9ed266187d279e1, type: 3}
+  m_Name: Unsent Letter
+  m_EditorClassIdentifier: Assembly-CSharp::NoteData
+  HoverText: Unsent Letter
+  ContentText: "Dear Mother,\n\nNone of the scribes that were sent to the field have
+    returned, there's only a few of us left inside the codex maintaning the teleporter.
+    \n\nI'll be scheduled for dispatch by next week. If this letter reaches you,
+    know that I volunteered. Someone has to record what happens if we fail\n\n- Your
+    Filial Son,\nRas"

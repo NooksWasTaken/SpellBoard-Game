@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070a5cc867f57534e9ed266187d279e1, type: 3}
+  m_Name: Scribes Log 1
+  m_EditorClassIdentifier: Assembly-CSharp::NoteData
+  HoverText: Scribe's Log #1
+  ContentText: 'Dispatch orders have been issued to all available scribes.
+
+
+    The
+    Arcane Codex will remain operational with minimal personnel until further notice.
+
+
+    Archive
+    preservation is considered secondary to containment.'
